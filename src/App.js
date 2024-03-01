@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const BASE_URL =
+		'https://docs.google.com/gview?embedded=true&url=https://hygear-mobile.s3.amazonaws.com/assets/header/menu-compressed.pdf';
+
+	return (
+		<div class="bg-black h-screen justify-center items-center flex">
+			<iframe
+				width="100%"
+				height="100%"
+				title="PDF Viewer"
+				src={BASE_URL}
+				type="application/pdf"
+			/>
+		</div>
+	);
 }
 
 export default App;
